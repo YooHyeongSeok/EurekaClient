@@ -1,0 +1,14 @@
+server:
+  port: 8762
+spring:
+  application:
+    #유레카 서버에 등록되는 서비스 명
+    name: customer-service
+eureka:
+  client:
+    serviceUrl:
+      #동일한 zone의 eureka server clustering 설정
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #서비스간 통신 시 hostname보다 ip를 우성 사용할지 여부
+    preferIpAddress: true
